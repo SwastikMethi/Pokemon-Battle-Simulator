@@ -41,7 +41,10 @@ First-Turn Immunity: Realistic battle flow where the first attacker cannot be pa
 - `run_server.py` → Entry point to start the MCP server.
 - `mcp_server.log` → Server logs.
 
-## Usage
+## 🧰 Usage
+- Create virtual-env and activate venv
+- run `pip install -r requirements.py`
+  
 -*On MCP-Inspector*
 - mcp-inspector python -m src.server
 
@@ -65,7 +68,7 @@ First-Turn Immunity: Realistic battle flow where the first attacker cannot be pa
 
 ## MCP Client Examples
 ### Question: Who will win between lugia and raichu?
-### Processing_response : {
+### Tool_response : {
   "pokemon1": "lugia",
   "pokemon2": "raichu"
 }
