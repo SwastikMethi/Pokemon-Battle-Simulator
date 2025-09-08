@@ -2,14 +2,14 @@
 
 A comprehensive Model Context Protocol (MCP) server that provides AI models with access to Pokemon data and battle simulation capabilities. This server acts as a bridge between AI assistants like Claude Desktop and the Pokemon world, enabling both data retrieval and interactive battle simulations.
 
-# 🎮 Features
-## Part 1: Pokemon Data Resource
+## 🎮 Features
+### Part 1: Pokemon Data Resource
 Comprehensive Pokemon Information: Stats, types, abilities, moves, and evolution data
 Type Effectiveness System: Complete 18-type matchup chart with accurate multipliers
 Real-time API Integration: Connects to PokéAPI for up-to-date Pokemon data
 Intelligent Caching: Optimized performance with local data caching
 
-## Part 2: Battle Simulation Tool
+### Part 2: Battle Simulation Tool
 Advanced Battle Mechanics: Official Pokemon damage formula implementation
 Type Effectiveness Calculations: Super effective, not very effective, and immunity handling
 Turn-Based Combat: Speed-based turn order with speed-tie resolution
@@ -40,10 +40,28 @@ First-Turn Immunity: Realistic battle flow where the first attacker cannot be pa
 - `requirements.txt` → Python dependencies.
 - `run_server.py` → Entry point to start the MCP server.
 - `mcp_server.log` → Server logs.
-- `README.md` → Documentation.
 
-# Usage
-mcp-inspector python -m src.server
+## Usage
+-*On MCP-Inspector*
+- mcp-inspector python -m src.server
+
+-*On Claude Desktop*
+- Add below mentioned JSON to claude_desktop_config.json after downloading Claude Desktop
+- {
+  "mcpServers": {
+    "pokemon-battle": {
+      "command": "path to your python.exe in virtual env",
+      "args": ["-m"(for module implementation), path to src.server],
+      "workingDirectory": "/path/to/Pokemon-Battle-Simulator"
+    }
+  }
+}
+- Restart your Claude Desktop and ask bot to simulate battle between your favourite pokemons.
+
+## 🐳 Docker Setup
+- docker build -t pokemon-mcp-server
+- docker ps -a (check container list)
+- docker run -it --rm pokemon-mcp-server
 
 ## MCP Client Examples
 ### Question: Who will win between lugia and raichu?
@@ -105,7 +123,7 @@ mcp-inspector python -m src.server
     }
   }
 }
-### final_response:
+### Final_response:
 I can simulate a Pokémon battle between Lugia and Raichu to see who would win! Let me run that battle for you.**Lugia wins!** 
 
 The battle was surprisingly close at first - Raichu's Thunder Punch was super effective against Lugia (thanks to the Flying type) and dealt massive damage right off the bat, reducing Lugia from 106 HP down to just 45 HP in one hit!
