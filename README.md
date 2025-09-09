@@ -46,7 +46,8 @@ First-Turn Immunity: Realistic battle flow where the first attacker cannot be pa
 - run `pip install -r requirements.txt`
   
 -*On MCP-Inspector*
-- mcp-inspector python -m src.server
+- run `npm install -g @modelcontextprotocol/inspector` to install
+- start mcp server: `mcp-inspector python -m src.server`
 
 -*On Claude Desktop*
 - Add below mentioned JSON to claude_desktop_config.json after downloading Claude Desktop
