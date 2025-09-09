@@ -2,6 +2,7 @@
 from src.utils.data_loader import PokemonDataLoader
 from src.utils.battle_mechanics import BattleSimulator
 from typing import Dict, Any
+from src.logger_file import logger
 
 # Global instances
 data_loader = PokemonDataLoader()

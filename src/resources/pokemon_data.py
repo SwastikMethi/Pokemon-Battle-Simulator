@@ -11,7 +11,6 @@ class PokemonDataResource:
         self.data_loader = data_loader
 
     def list_resources(self) -> List[Resource]:
-        """List available Pokemon data resources"""
         return [
             Resource(
                 uri="pokemon://search",
@@ -26,12 +25,6 @@ class PokemonDataResource:
                 mimeType="application/json"
             ),
             Resource(
-                uri="pokemon://pokemon/charizard",
-                name="Pokemon Data(charizard)",
-                description="Get comprehensive data for any Pokemon(Charizard) including stats, types, abilities, and moves",
-                mimeType="application/json"
-            ),
-            Resource(
                 uri="pokemon://type-chart",
                 name="Type Effectiveness Chart",
                 description="Get the complete Pokemon type effectiveness chart",
@@ -40,16 +33,15 @@ class PokemonDataResource:
         ]
 
     async def get_pokemon_resource(self, uri: str) -> TextResourceContents:
-        """Get Pokemon data based on URI"""
         try:
-            uri_str = str(uri) ## if hasattr(uri, '__str__') else uri
+            uri_str = str(uri)
             decoded_uri = urllib.parse.unquote(uri_str)
 
             # logger.info(f"Original URI: {uri_str}")
             # logger.info(f"Decoded URI: {decoded_uri}")
 
             if decoded_uri == "pokemon://search":
-                # logger.info("pokemon search")
+                logger.info("pokemon search")
             # Return list of searchable Pokemon
                 pokemon_list = [
                     "pikachu", "charizard", "blastoise", "venusaur", "alakazam", 
@@ -65,8 +57,9 @@ class PokemonDataResource:
                 }, indent=2)
 
             elif decoded_uri.startswith("pokemon://pokemon/"):
+                logger.info("non-dynamic pokemon details")
                 # logger.info("in function 1")
-                pokemon_name = decoded_uri.split("/")[-1]
+                pokemon_name = decoded_uri.split("/")[-1].lower()
                 pokemon = await self.data_loader.fetch_pokemon_data(pokemon_name)
                 
                 # Convert to JSON
@@ -96,7 +89,8 @@ class PokemonDataResource:
                 # logger.info(f"content: {content}")
                 
             elif decoded_uri == "pokemon://type-chart":
-                logger.info("in function 2")
+                logger.info("Effectiveness chart")
+                # logger.info("in function 2")
                 # Get type effectiveness chart
                 type_chart = await self.data_loader.load_type_effectiveness()
                 text = json.dumps(type_chart, indent=2)

@@ -5,6 +5,7 @@ import json
 import os
 from typing import Dict, List
 from src.models import Pokemon, PokemonStats, Move
+from src.logger_file import logger
 
 class PokemonDataLoader:
     def __init__(self):

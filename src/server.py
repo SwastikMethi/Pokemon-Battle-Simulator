@@ -7,15 +7,17 @@ from typing import Dict
 import asyncio
 import sys
 import os
-# from src.logger_file import logger
+# from logger_file import logger
 import json
 
-logging.basicConfig(
+logger = logging.basicConfig(
     filename='mcp_server.log',
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
+
 # Fix import path
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from mcp.server import Server
@@ -24,12 +26,12 @@ from mcp.types import Resource, Tool, TextResourceContents
 
 from src.utils.data_loader import PokemonDataLoader
 from src.resources.pokemon_data import PokemonDataResource
-from src.tools import battle_simulator
+from src.tools import battle_simulator, pokemon_data_tool
 
 # Initialize MCP server
 app = Server("pokemon-battle-server")
+# logger.info("Server started.")
 
-# Set up data loader and resources
 data_loader = PokemonDataLoader()
 pokemon_resource = PokemonDataResource(data_loader)
 
@@ -71,6 +73,21 @@ async def list_tools():
                 },
                 "required": ["pokemon1", "pokemon2"]
             }
+        ),
+        Tool(
+            name="pokemon_details",
+            description = "Get comprehensive data for any Pokemon including stats, types, abilities, and moves",
+            inputSchema={
+                "type": "object",
+                "properties":{
+                    "pokemon_name":{
+                        "type":"string",
+                        "description":"Name of the Pokemon to fetch data for (e.g., 'pikachu', 'charizard')"
+                    }
+                },
+                "required":["pokemon_name"]
+
+            }
         )
     ]
 
@@ -91,6 +108,11 @@ async def call_tool(name: str, arguments: Dict):
                 # logger.warning(f"Unexpected result type: {type(result)}")
                 return {"error": f"Unexpected result type: {type(result)}"}
             return result
+        
+        elif name == "pokemon_details":
+            result = await pokemon_data_tool.get_pokemon_data(arguments.get("pokemon_name"))
+            return result
+        
         else:
             raise ValueError(f"Unknown tool: {name}")
     except Exception as e:

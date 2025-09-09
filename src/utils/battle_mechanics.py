@@ -2,6 +2,7 @@
 import random
 from typing import Dict, List, Tuple
 from src.models import Pokemon, Move, BattleResult
+from src.logger_file import logger
 
 class TypeEffectiveness:
     def __init__(self):
