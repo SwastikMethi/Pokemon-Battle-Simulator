@@ -43,7 +43,7 @@ First-Turn Immunity: Realistic battle flow where the first attacker cannot be pa
 
 ## 🧰 Usage
 - Create virtual-env and activate venv
-- run `pip install -r requirements.py`
+- run `pip install -r requirements.txt`
   
 -*On MCP-Inspector*
 - mcp-inspector python -m src.server
