@@ -55,7 +55,7 @@ class PokemonDataResource:
                     "pikachu", "charizard", "blastoise", "venusaur", "alakazam", 
                     "machamp", "gengar", "dragonite", "mewtwo", "mew"
                 ]
-                content = json.dumps({
+                text = json.dumps({
                     "available_pokemon": pokemon_list,
                     "usage": "Use pokemon://pokemon/{name} to get specific Pokemon data",
                     "examples": [
@@ -92,23 +92,24 @@ class PokemonDataResource:
                     "weight": pokemon.weight
                 }
                 
-                content = json.dumps(pokemon_dict, indent=2)
+                text = json.dumps(pokemon_dict, indent=2)
                 # logger.info(f"content: {content}")
                 
             elif decoded_uri == "pokemon://type-chart":
                 logger.info("in function 2")
                 # Get type effectiveness chart
                 type_chart = await self.data_loader.load_type_effectiveness()
-                content = json.dumps(type_chart, indent=2)
+                text = json.dumps(type_chart, indent=2)
                 
             else:
                 # logger.info("in function 3")
-                content = json.dumps({"error": f"Invalid URI format {decoded_uri}"})
-            return [TextResourceContents(
-                uri=uri_str,
-                mimeType="application/json",
-                text=content
-            )]
+                text = json.dumps({"error": f"Invalid URI format {decoded_uri}"})
+            # return TextResourceContents(
+            #     uri=uri_str,
+            #     mimeType="application/json",
+            #     text=text
+            # )
+            return text
         
         except Exception as e:
             logger.error(f"error in get_poekomon resource:{e}",exc_info=True)

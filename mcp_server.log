@@ -1,0 +1,55 @@
+2025-09-08 21:13:32,450 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-09 10:30:40,037 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 10:30:41,570 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 10:36:44,438 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-09 10:40:50,515 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 10:40:51,451 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 10:40:55,903 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 10:53:40,102 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 10:53:41,005 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 10:54:19,638 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 10:54:21,089 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 10:56:26,283 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 10:56:27,699 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 10:57:02,202 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 10:57:04,090 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 10:57:33,799 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 10:57:35,057 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:07:31,883 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 11:07:33,198 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:07:51,486 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 11:07:52,544 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:14:24,118 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 11:14:25,369 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:14:51,292 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 11:14:52,404 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:17:18,941 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 11:17:20,655 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:25:45,347 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 11:25:47,024 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:25:50,482 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:25:55,746 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:25:57,681 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:26:39,733 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 11:26:40,959 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:28:15,280 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 11:28:15,280 - pokemon_app - INFO - in function 2
+2025-09-09 11:28:25,784 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2025-09-09 17:21:47,400 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 17:21:50,152 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:25:57,778 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-09-09 17:26:13,734 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-09 17:26:15,310 - httpx - INFO - HTTP Request: GET https://pokeapi.co/api/v2/pokemon/pichu "HTTP/1.1 200 OK"
+2025-09-09 17:26:15,714 - httpx - INFO - HTTP Request: GET https://pokeapi.co/api/v2/move/mega-kick "HTTP/1.1 200 OK"
+2025-09-09 17:26:30,785 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-09-09 17:26:31,700 - httpx - INFO - HTTP Request: GET https://pokeapi.co/api/v2/pokemon/kadabra "HTTP/1.1 200 OK"
+2025-09-09 17:29:28,510 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:29:31,095 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:34:53,506 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-09-09 17:34:54,652 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:35:00,336 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:35:04,755 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:35:06,452 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:35:09,356 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-09-09 17:35:09,356 - pokemon_app - INFO - in function 2
+2025-09-09 17:35:21,502 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest

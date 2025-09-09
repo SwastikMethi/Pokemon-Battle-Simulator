@@ -45,12 +45,12 @@ async def read_resource(uri: str) -> list[TextResourceContents]:
         return result
     
     except Exception as e:
-        return [TextResourceContents(
+        return TextResourceContents(
             uri=uri,
             mimeType="text/plain",
             text=f"Error: {e}"
-        )]
-    
+        )
+
 @app.list_tools()
 async def list_tools():
     return [
@@ -98,7 +98,6 @@ async def call_tool(name: str, arguments: Dict):
         return {"error": f"Tool execution failed: {str(e)}"}
 
 async def main():
-    """Main server function"""
     async with stdio_server() as (read_stream, write_stream):
         await app.run(
             read_stream,
