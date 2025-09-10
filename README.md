@@ -25,6 +25,7 @@ First-Turn Immunity: Realistic battle flow where the first attacker cannot be pa
   - **resources/** → MCP resources
     - `pokemon_data.py` → Handles Pokémon data resources.
   - **tools/** → Battle-related tools
+    - `pokemon_data_tool.py` → Returns dynamic Pokemon data from PokeAPI.
     - `battle_simulator.py` → Pokémon battle simulation logic.
   - **utils/** → Utility modules
     - `battle_mechanics.py` → Core battle mechanics (damage, type matchups, etc.).
@@ -41,7 +42,7 @@ First-Turn Immunity: Realistic battle flow where the first attacker cannot be pa
 - `run_server.py` → Entry point to start the MCP server.
 - `mcp_server.log` → Server logs.
 
-## 🧰 Usage
+## 🧰 Deployment
 - Create virtual-env and activate venv
 - run `pip install -r requirements.txt`
   
